@@ -1,0 +1,25 @@
+/**Items:
+Shirts (6)
+Pants (6)
+Shoes (4)
+**/
+
+CREATE TABLE items (id INTEGER PRIMARY KEY, name TEXT, color TEXT, size TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO items VALUES (1, "shirt", "red", "small", 2, 14.00);
+INSERT INTO items VALUES (2, "shirt", "blue","medium", 2, 15.00);
+INSERT INTO items VALUES (3, "shirt", "yellow", "large",2, 15.00;
+INSERT INTO items VALUES (4, "pants","denim","small",2, 20.00);
+INSERT INTO items VALUES (5, "pants", "corduroy","medium",2, 25.00);
+INSERT INTO items VALUES (6, "pants", "khaki", "large", 2, 15.00);
+INSERT INTO items VALUES (7, "shoes", "black","small",1, 30.00);
+INSERT INTO items VALUES (8, "shoes","gray", "small", 1, 30.00);
+INSERT INTO items VALUES (9, "shoes", "black", "large",1, 35.00);
+INSERT INTO items VALUES (10, "shoes","gray","large",1,35.00);
+
+
+---display the database ordered by price
+SELECT * FROM items
+ORDER BY price acs;
+
+--
