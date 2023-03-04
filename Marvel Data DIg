@@ -42,7 +42,7 @@ INSERT INTO marvels VALUES(26, "Professor X", 58, "Good", "Male", 1.83, 86, "EUA
 
 
 
---Display avg height of marvel character by fighting skills
+--Display avg height of marvel characters by fighting skills
 Select name, AVG(height_m) AS avg_height FROM marvels
 GROUP BY fighting_skills
 HAVING avg_height > 2;
