@@ -1,0 +1,45 @@
+CREATE TABLE artists (id INTEGER PRIMARY KEY, fullname TEXT, age INTEGER);
+INSERT INTO artists VALUES (1, "Lecrae Moore", 33);
+INSERT INTO artists VALUES (2, "Trip Lee", 36);
+INSERT INTO artists VALUES (3, "Yolanda Adams", 60);
+INSERT INTO artists VALUES (4, "Tamala Mann", 55);
+INSERT INTO artists VALUES (5, "Kirk Franklin", 62);
+INSERT INTO artists VALUES (6, "LaShun Pace", 55);
+INSERT INTO artists VALUES (7, "Travis Greene", 34);
+INSERT INTO artists VALUES (8, "Tasha Cobbs Leonard",46);
+
+CREATE TABLE songs (id INTEGER, person_id INTEGER, name TEXT);
+INSERT INTO songs VALUES (1, 1, "Church Clothes");
+INSERT INTO songs VALUES (1, 1, "Holy Water");
+INSERT INTO songs VALUES (2, 2, "Right Out The Gate");
+INSERT INTO songs VALUES (2, 2, "Stone");
+INSERT INTO songs VALUES (3, 3, "Fragile Heart");
+INSERT INTO songs VALUES (3, 3, "Mountain High Valley Low");
+INSERT INTO songs VALUES (4, 4," I Can Only Imagine");
+INSERT INTO songs VALUES (4, 4, "God Provides");
+INSERT INTO songs VALUES (5,5, "Stomp");
+INSERT INTO songs VALUES (5,5, "Give Me");
+INSERT INTO songs VALUES (6,6, "There's A Leak In This Old Building");
+INSERT INTO songs VALUES (6,6, "I Know I've Been Changed");
+INSERT INTO songs VALUES (7,7,"The Hill");
+INSERT INTO songs VALUES (7,7, "Intentional");
+INSERT INTO songs VALUES (8,8, "Break Every Chain");
+INSERT INTO songs VALUES (8,8, "My World Needs You");
+
+CREATE TABLE hometown (id INTEGER, person_id INTEGER, town TEXT);
+INSERT INTO hometown VALUES (1,1, "Atlanta");
+INSERT INTO hometown VALUES (2,2, "Dallas");
+INSERT INTO hometown VALUES (3,3,"Houston");
+INSERT INTO hometown VALUES (4,4,"Atlanta");
+INSERT INTO hometown VALUES (5,5,"Memphis");
+INSERT INTO hometown VALUES (6,6,"Lockwood");
+INSERT INTO hometown VALUES (7,7,"Raleigh");
+INSERT INTO hometown VALUES (8,8,"Baltimore");
+
+
+--Display artist's name with their songs
+SELECT a. fullname, s.name
+FROM artists a 
+JOIN songs s 
+ON a.id= s.person_id
+
